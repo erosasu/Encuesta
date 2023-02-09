@@ -1,0 +1,32 @@
+{
+  "name": "encuesta",
+  "version": "1.0.0",
+  "description": "Proyecto Cloud Developer",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erosasu/Encuesta.git"
+  },
+  "author": "Ernesto Uriarte y Cecilia D",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erosasu/Encuesta/issues"
+  },
+  "homepage": "https://github.com/erosasu/Encuesta#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1302.0",
+    "dotenv": "^16.0.3",
+    "dynamoose": "^3.1.0",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.7",
+    "multer": "^1.4.5-lts.1",
+    "node-modules": "^0.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

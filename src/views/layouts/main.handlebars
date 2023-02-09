@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+
+
+    
+</head>
+<body>
+    <script type=»text/javascript»>
+
+    $(document).ready(function(){
+		var cantidadMaxima=3;
+	// Evento que se ejecuta al soltar una tecla en el input
+	$("#cantidad").keydown(function(){
+		$("input[type=checkbox]").prop('checked', false);
+		$("#seleccionados").html("0");
+	});
+ 
+	// Evento que se ejecuta al pulsar en un checkbox
+	$("input[type=checkbox]").change(function(){
+ 
+		// Cogemos el elemento actual
+		var elemento=this;
+		var contador=0;
+ 
+		// Recorremos todos los checkbox para contar los que estan seleccionados
+		$("input[type=checkbox]").each(function(){
+			if($(this).is(":checked"))
+				contador++;
+		});
+ 
+
+ 
+		// Comprovamos si supera la cantidad máxima indicada
+		if(contador>cantidadMaxima)
+		{
+			alert("Has seleccionado mas checkbox que los indicados");
+ 
+			// Desmarcamos el ultimo elemento
+			$(elemento).prop('checked', false);
+			contador--;
+		}
+ 
+		$("#seleccionados").html(contador);
+	});
+});
+
+var d = new Date();
+
+document.write('Fecha: '+d.getDate(),'<br>Dia de la semana: '+d.getDay(),'<br>Mes (0 al 11): '+d.getMonth(),'<br>Año:'+d.getFullYear(),'<br>Hora:'+d.getHours(),'<br>HoraUTC: '+d.getUTCHours(),'<br>Minutos: '+d.getMinutes(),'<br>Segundos: '+d.getSeconds());
+
+</script>
+    <h1></h1>
+    {{{body}}}
+</body>
+</html>

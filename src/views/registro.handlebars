@@ -1,0 +1,777 @@
+
+<h2>Bienvenid@ a la encuesta, a continuación podras llenar un formulario con algunas preguntas acerca de tus gustos y preferencias,
+    el onjetivo de esta encuesta es poder comparar tus respuestas con las de otras personas para encontrar similitudes entre preferencias de personas.
+    Al ingresar tu información, te enviaremos un correo electrónico con los perfiles con los que tuviste mayores porcentajes de similitudes una vez que hayamos terminado de 
+    recolectar y analizar las respuestas de 1000 encuestas.
+</h2>
+
+
+
+<div class="form-control">
+  <form action="" method='POST'>
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" placeholder="Escribe aqui tu nombre"><br>
+    <label for="correo">Correo electronico:</label>
+    <input type="email" name="correo" placeholder="Escribe aqui tu correo electronico"><br>
+    <label for="edad">Edad: </label>
+    <input type="edad" name="edad"><br>
+
+    <label for="genero">Selecciona tu genero</label>
+    <select name="genero" id="" >
+        <option value="masculino">Hombre</option>
+        <option value="femenino">Mujer</option>
+        <option value="no_binario">No binario</option>
+    </select>
+    <BR>
+
+             <label class="title">1. Escribe el nombre de tus 10 grupos musicales o artistas preferidos</label>
+	
+	        <TEXTAREA name="artistas" rows = 3 cols = 60 wrap = virtual ></TEXTAREA>
+            <BR>
+
+        <div id="gen_musical">
+            <label class="title">2. Selecciona tus 6 Generos musicales preferidos</label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="gen_musical[]" value="Regueton" class="gen_musical">Regueton</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="gen_musical[]" value ="Banda" class="gen_musical">Banda</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="gen_musical[]" value="Cuambia" class="gen_musical">Cuambia</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="gen_musical[]" value="Salsa" class="gen_musical">Salsa</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="gen_musical[]" value="Rock" class="gen_musical"> Rock</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="gen_musical[]" value = "Metal" class="gen_musical">Metal</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="gen_musical[]" value="Rock and" class="gen_musical">Rock and</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="gen_musical[]" value="Baladas" class="gen_musical">Baladas</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="gen_musical[]" value="Boleros" class="gen_musical">Boleros</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                     name="gen_musical[]" value="Pop" class="gen_musical">Pop</input></label>
+                     <label for="inp-1">
+                <input type="checkbox"
+                       name="gen_musical[]" value="Rap" class="gen_musical">Rap/Hip hop</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="gen_musical[]" value ="Trap" class="gen_musical">Trap</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="gen_musical[]" value="Clasica" class="gen_musical">Clasica</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="gen_musical[]" value="Techno" class="gen_musical">Techno</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="gen_musical[]" value="Disco" class="gen_musical"> Disco</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="gen_musical[]" value = "Mariachi" class="gen_musical">Mariachi</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="gen_musical[]" value="Reggae" class="gen_musical">Reggae</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="gen_musical[]" value="Jazz" class="gen_musical">Jazz</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="gen_musical[]" value="Country" class="gen_musical">Country</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                     name="gen_musical[]" value="Trova" class="gen_musical">Trova</input></label>
+         </div>
+          <script>
+        const checkboxes = document.querySelectorAll('input[class="gen_musical"]');
+
+        let selectedCount1 = 0;
+      
+        for (let checkbox1 of checkboxes) {
+          checkbox1.addEventListener('change', function () {
+            console.log(this.checked)
+            if (this.checked) {
+              selectedCount1++;
+              if (selectedCount1 > 6) {
+                alert('You can only select 6 options');
+                this.checked = false;
+                selectedCount1--;
+              }
+            } else {
+              selectedCount1--;
+            }
+          });
+        }
+         </script>   
+           
+            <br>
+
+
+         <div id="gen_pelis">   
+            <label class="title">3.  Selecciona tus 3 generos de peliculas preferidos</label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="gen_pelis" value=1 class="gen_pelis">Romance</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="gen_pelis" value =2 class="gen_pelis">Accion</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="gen_pelis" value=3 class="gen_pelis">Super heroes/Marvel</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="gen_pelis" value=4 class="gen_pelis">Basada en hechos reales</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="gen_pelis" value=5 class="gen_pelis"> Comedias</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="gen_pelis" value =6 class="gen_pelis">Animadas/caricaturas</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="gen_pelis" value=7 class="gen_pelis">Músicales</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="gen_pelis" value=8 class="gen_pelis">Animes</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="gen_pelis" value=9 class="gen_pelis">Thriller-terror-suspenso</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                     name="deportes" value=10 class="gen_pelis">Ciencia ficcion</input></label>
+            <br>
+             <script>
+        const checkboxes2 = document.querySelectorAll('input[class="gen_pelis"]');
+
+        let selectedCount2 = 0;
+      
+        for (let checkbox of checkboxes2) {
+          checkbox.addEventListener('change', function () {
+            console.log(this.checked)
+            if (this.checked) {
+              selectedCount2++;
+              if (selectedCount2 > 3) {
+                alert('You can only select 3 options');
+                this.checked = false;
+                selectedCount2--;
+              }
+            } else {
+              selectedCount2--;
+            }
+          });
+        }
+    </script>  
+
+            <label class="title">4. ¿Qué tipo de videos sueles consumir en youtube?(selecciona 4)</label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="gen_vid_youtube" value="Tutoriales de maquillaje" class="gen_vid_youtube">Tutoriales de maquillaje</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="gen_vid_youtube" value ="Tutoriales de cocina y receta" class="gen_vid_youtube">Tutoriales de cocina y receta</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="gen_vid_youtube" value="Podcast temas relevantes" class="gen_vid_youtube">Podcast temas relevantes</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="gen_vid_youtube" value="Comedias o Stand up" class="gen_vid_youtube">Comedias o Stand up</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="gen_vid_youtube" value="documentales e historia" class="gen_vid_youtube">Dumentales e historia</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="gen_vid_youtube" value = "videos cientificos" class="gen_vid_youtube">videos científicos</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="gen_vid_youtube" value="Videojuegos" class="gen_vid_youtube">Videojuegos</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="gen_vid_youtube" value="Videos de animales" class="gen_vid_youtube">Videos de animales</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="gen_vid_youtube" value="Gym" class="gen_vid_youtube">Rutinas de gym y alimentacion</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                     name="gen_vid_youtube" value="Noticias" class="gen_vid_youtube">Noticias del pais y el mundo</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                     name="gen_vid_youtube" value="films" class="gen_vid_youtube">Peliculas</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                     name="gen_vid_youtube" value="Conciertos" class="gen_vid_youtube">Conciertos en vivo</input></label>
+          </div>
+           <script>
+        const checkboxes3 = document.querySelectorAll('input[class="gen_vid_youtube"]');
+
+        let selectedCount3 = 0;
+      
+        for (let checkbox of checkboxes3) {
+          checkbox.addEventListener('change', function () {
+            console.log(this.checked)
+            if (this.checked) {
+              selectedCount3++;
+              if (selectedCount3 > 4) {
+                alert('You can only select 4 options');
+                this.checked = false;
+                selectedCount3--;
+              }
+            } else {
+              selectedCount3--;
+            }
+          });
+        }
+    </script>  
+          <br>  
+          <div id="deportes"> 
+            <label class="title">6.  Selecciona tus 3 deportes favoritos para ver o practicar</label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="deportes" value="futbol" class="deportes">Futbol/soccer</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="deportes" value ="baseball" class="deportes">Baseball</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="deportes" value="americano" class="deportes">Americano</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="deportes" value="tenis" class="deportes">Tenis</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="deportes" value="boley ball" class="deportes"> Bolley ball</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="deportes" value = "hokey" class="deportes">Hokey</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="deportes" value="rugby" class="deportes">Rugby</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="deportes" value="front-ton" class="deportes">Front ton</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="deportes" value="natacion" class="deportes">Natación</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                     name="deportes" value="atletismo" class="deportes">Atletismo</input></label>
+        </div>     
+            <br>
+             <script>
+        const checkboxes4 = document.querySelectorAll('input[class="deportes"]');
+
+        let selectedCount4 = 0;
+      
+        for (let checkbox of checkboxes4) {
+          checkbox.addEventListener('change', function () {
+            console.log(this.checked)
+            if (this.checked) {
+              selectedCount4++;
+              if (selectedCount4 > 3) {
+                alert('You can only select 3 options');
+                this.checked = false;
+                selectedCount4--;
+              }
+            } else {
+              selectedCount4--;
+            }
+          });
+        }
+    </script>  
+
+         <div id="act_solo">    
+            <label class="title">7. ¿Qué actividades son las que mas disfrutas hacer estando solo?(selecciona 10)</label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="act_solo" value="ir en tu restaurante favorito" class="act_solo">Ir a tu restaurante favorito</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="act_solo" value ="Pasar la tarde en una alberca" class="act_solo">Pasar la tarde en una alberca</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="act_solo" value="Trabajar" class="act_solo">Trabajar</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="act_solo" value="Estudiar y aprender cualquier cosa" class="act_solo">Estudiar y aprender cualquier cosa</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="act_solo" value="Viajar a lugares desconocidos y extravagantes" class="act_solo"> Viajar a lugares desconocidos y extravagantes</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="act_solo" value = "Estar en la playa tomando el sol" class="act_solo">Estar en la playa tomando el sol</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="act_solo" value="Cocinar en tu casa" class="act_solo">Cocinar en tu casa</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="act_solo" value="Pasear en bicicleta o hacer ciclismo" class="act_solo">Pasear en bicicleta o hacer ciclismo</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="act_solo" value="Escalar o hacer rapel" class="act_solo">Escalar o hacer rapel</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                     name="act_solo" value="Entrenar en el gimnacio" class="act_solo">Entrenar en el gimnacio</input></label>
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="act_solo" value="Nadar" class="act_solo">Nadar</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="act_solo" value ="Ver videos en internet" class="act_solo">Ver videos en internet</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="act_solo" value="Patinar sobre patineta o patines" class="act_solo">Patinar sobre patineta o patines</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="act_solo" value="Conducir" class="act_solo">Conducir</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="act_solo" value="Surfear" class="act_solo"> Surfear</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="act_solo" value = "Ir de compras" class="act_solo">Ir de compras</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="act_solo" value="Leer" class="act_solo">Leer</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="act_solo" value="Tocar algun instrumento" class="act_solo">Tocar algun instrumento</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="act_solo" value="Cantar" class="act_solo">Cantar</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                     name="act_solo" value="Dedicar tiempo al coche" class="act_solo">Lavar y arreglar tu Automovil o motocicleta</input></label>
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="act_solo" value="Escribir" class="act_solo">Escribir</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="act_solo" value ="HAcer tareas del hogar" class="act_solo">Hacer tareas del hogar</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="act_solo" value="Jugar videojuegos" class="act_solo">Jugar videojuegos</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="act_solo" value="Pintar" class="act_solo">Pintar</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="act_solo" value="Caminar" class="act_solo"> Caminar</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="act_solo" value = "Maquillarte" class="act_solo">Maquillarte</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="act_solo" value="Hacer videos para internet" class="act_solo">Hacer videos para internet</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="act_solo" value="Ver deportes en tv" class="act_solo">Ver deportes en tv</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="act_solo" value="Tomar fotografias" class="act_solo">Tomar fotografias</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                     name="act_solo" value="Componer" class="act_solo">Componer</input></label>
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="act_solo" value="Diseñar/crear cosas/inventar" class="act_solo">Diseñar/crear cosas/inventar</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="act_solo" value ="Bucear o hacer snorkel" class="act_solo">Bucear o hacer snorkel</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="act_solo" value="comer" class="act_solo">Comer</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="act_solo" value="Dormir" class="act_solo">Dormir</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="act_solo" value="ver series" class="act_solo"> Ver series</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="act_solo" value = "Hacer Jardineria" class="act_solo">Hacer jardineria</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="act_solo" value="Correr" class="act_solo">Correr</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="act_solo" value="Arreglar tu casa" class="act_solo">Arreglar tu casa</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="act_solo" value="Escuchar musica " class="act_solo">Escuchar </input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                     name="act_solo" value="Alcohol" class="act_solo">Beber Alcohol</input></label>
+         </div>  
+          <script>
+        const checkboxes5 = document.querySelectorAll('input[class="act_solo"]');
+
+        let selectedCount5 = 0;
+      
+        for (let checkbox of checkboxes5) {
+          checkbox.addEventListener('change', function () {
+            console.log(this.checked)
+            if (this.checked) {
+              selectedCount5++;
+              if (selectedCount5 > 10) {
+                alert('You can only select 10 options');
+                this.checked = false;
+                selectedCount5--;
+              }
+            } else {
+              selectedCount5--;
+            }
+          });
+        }
+    </script>   
+            <br>
+        <div id="act_acompanado"> 
+             <label class="title">8. Selecciona 5 actividades que disfrutes hacer acompañado</label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="act_acompanado" value="Ir al cine con pareja o amigos" class="act_acompanado">Ir al cine con pareja o amigos</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="act_acompanado" value ="Salir a fiestas" class="act_acompanado">Salir a fiestas</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="act_acompanado" value="Hacer una parrillada con familiares y amigos" class="act_acompanado">Hacer una parrillada con familiares y amigos</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="act_acompanado" value="Ver peliculas con tu pareja o familia o amigos" class="act_acompanado">Ver peliculas con tu pareja o familia o amigos</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="act_acompanado" value="Ir a comer a tu restaurante favoritos" class="act_acompanado"> Ir a comer a tu restaurante favoritos</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="act_acompanado" value = "Viajar con amigos, pareja o familia" class="act_acompanado">Viajar con amigos, pareja o familia</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="act_acompanado" value="Trabajar en un proyecto con colegas" class="act_acompanado">Trabajar en un proyecto con colegas</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="act_acompanado" value="Salir a bailar" class="act_acompanado">Salir a bailar</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="act_acompanado" value="Hacer reuniones tranquilas en tu casa con familiares y amigos" class="act_acompanado">Hacer reuniones tranquilas en tu casa con familiares y amigos</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                     name="act_acompanado" value="Ir a conciertos" class="act_acompanado">Ir a conciertos</input></label>
+                     <label for="inp-1">
+                <input type="checkbox"
+                       name="act_acompanado" value="Albercada con amigos" class="act_acompanado">Albercada con amigos</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="act_acompanado" value ="Jugar con tus hijos" class="act_acompanado">Jugar con tus hijos</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="act_acompanado" value="Hacer deporte acompañado" class="act_acompanado">Hacer deporte acompañado</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="act_acompanado" value="Tener una cita" class="act_acompanado">Tener una cita</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="act_acompanado" value="Comer con amigas o amigos" class="act_acompanado"> Comer con amigas o amigos</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="act_acompanado" value = "Jugar videojuegos" class="act_acompanado">Jugar videojuegos</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="act_acompanado" value="Ir al casino" class="act_acompanado">Ir al casino</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="act_acompanado" value="Cantar en karaoke" class="act_acompanado">Cantar en karaoke</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="act_acompanado" value="Ir al estadio o evento deportivo" class="act_acompanado">Ir al estadio o evento deportivo</input></label>
+         </div> 
+          <script>
+        const checkboxes6 = document.querySelectorAll('input[class="act_acompanado"]');
+
+        let selectedCount6 = 0;
+      
+        for (let checkbox of checkboxes6) {
+          checkbox.addEventListener('change', function () {
+            console.log(this.checked)
+            if (this.checked) {
+              selectedCount6++;
+              if (selectedCount6 > 5) {
+                alert('You can only select 5 options');
+                this.checked = false;
+                selectedCount6--;
+              }
+            } else {
+              selectedCount6--;
+            }
+          });
+        }
+    </script>    
+            <br>
+        <div id="lugares"> 
+            <label class="title">9. Selecciona tus 6 lugares favoritos para pasar el tiempo</label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="lugares" value="Tu casa" class="lugares">Tu casa</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="lugares" value ="Super mercado" class="lugares">Super mercado</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="lugares" value="Mall o centro comercial" class="lugares">Mall o centro comercial</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="lugares" value="campo" class="lugares">campo</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="lugares" value="Playa/hotel resort" class="lugares"> Playa/hotel resort</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="lugares" value = "Bosque" class="lugares">Bosque</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="lugares" value="Museo" class="lugares">Museo</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="lugares" value="Parque de diversiones" class="lugares">Parque de diversiones</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="lugares" value="Zoologico/acuario" class="lugares">Zoólogico/acuario</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                     name="lugares" value="Oficina" class="lugares">Oficina</input></label>
+                     <label for="inp-1">
+                <input type="checkbox"
+                       name="lugares" value="Taller" class="lugares">Taller/Hip hop</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="lugares" value ="Estadio" class="lugares">Estadio</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="lugares" value="Auditorio/teatro" class="lugares">Auditorio/teatro</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="lugares" value="Rave/festival" class="lugares">Rave/festival</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="lugares" value="Salon de fiestas" class="lugares"> Salon de fiestas</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="lugares" value = "Autodromo/pista" class="lugares">Autodromo/pista</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="lugares" value="Sitios arqueologicos" class="lugares">Sitios arqueológicos</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="lugares" value="Desierto" class="lugares">Desierto</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="lugares" value="Ruta para motocross o racer" class="lugares">Ruta para motocross o racer</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                     name="lugares" value="Enbarcacion / yate" class="lugares">Enbarcación / yate</input></label>
+             <label for="inp-4">
+                <input type="checkbox"
+                       name="lugares" value="Gimnasio" class="lugares">Gimnasio</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="lugares" value="Lugares nevados" class="lugares"> Lugares nevados</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="lugares" value = "Casino de apuestas" class="lugares">Casino de apuestas</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="lugares" value="Antros/discotecas" class="lugares">Antros/discotecas</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="lugares" value="Bares/restaurantes/cantinas" class="lugares">Bares/restaurantes/cantinas</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="lugares" value="Table dance" class="lugares">Table dance</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                     name="lugares" value="Iglesia" class="lugares">Iglesia</input></label>
+         </div> 
+          <script>
+        const checkboxes7 = document.querySelectorAll('input[class="lugares"]');
+
+        let selectedCount7 = 0;
+      
+        for (let checkbox of checkboxes7) {
+          checkbox.addEventListener('change', function () {
+            console.log(this.checked)
+            if (this.checked) {
+              selectedCount7++;
+              if (selectedCount7 > 6) {
+                alert('You can only select 6 options');
+                this.checked = false;
+                selectedCount7--;
+              }
+            } else {
+              selectedCount7--;
+            }
+          });
+        }
+    </script>  
+            <br>
+        <div id="tema">     
+            <label class="title">10. Selecciono 5 temas que te sean interesantes de acontinuación</label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="tema" value="Política  y economía mundial actual" class="tema">Política  y economía mundial actual</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="tema" value ="Historia y guerras actuales" class="tema">Historia y guerras actuales</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="tema" value="Ciencia y tecnólogia" class="tema">Ciéncia y tecnólogia</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="tema" value="Cambio climático y la contaminación" class="tema">Cambio climático y la contaminación</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="tema" value="Desigualdad social y feminismo" class="tema"> Desigualdad social y feminismo</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="tema" value = "Música" class="tema">Música</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="tema" value="Obras de arte visual" class="tema">Obras de arte visual</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="tema" value="Tu libro favorito" class="tema">Tu libro favorito</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="tema" value="Peliculas de marvel" class="tema">Peliculas de marvel</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                     name="tema" value="Tu series favoritas de Netflix" class="tema">Tu series favoritas de Netflix</input></label>
+                     <label for="inp-1">
+                <input type="checkbox"
+                       name="tema" value="Ideas de hacer negocios" class="tema">Ideas de hacer negocios</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="tema" value ="Hablar de tu expareja y como terminaron" class="tema">Hablar de tu expareja y como terminaron</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="tema" value="Chistes y memes de Internet" class="tema">Chistes y memes de Internet</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="tema" value="Tu automovil favorito" class="tema">Tu automovil favorito</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="tema" value="Noticias sobre el narco" class="tema"> Noticias sobre el narco</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="tema" value = "Los derechos de los animales" class="tema">Mariachi</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="tema" value="Viajes, vacaciones y lugares del mundo" class="tema">Viajes, vacaciones y lugares del mundo</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="tema" value="Arquitectura" class="tema">Arquitectura</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="tema" value="Medicina" class="tema">Medicina</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                     name="tema" value="Hablar de influencers" class="tema">Hablar de influencers</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                     name="tema" value="Hablar de tus artistas favoritos" class="tema">Hablar de tus artistas favoritos</input></label>
+           </div> 
+            <script>
+        const checkboxes8 = document.querySelectorAll('input[class="tema"]');
+
+        let selectedCount8 = 0;
+      
+        for (let checkbox of checkboxes8) {
+          checkbox.addEventListener('change', function () {
+            console.log(this.checked)
+            if (this.checked) {
+              selectedCount8++;
+              if (selectedCount8 > 5) {
+                alert('You can only select 5 options');
+                this.checked = false;
+                selectedCount8--;
+              }
+            } else {
+              selectedCount8--;
+            }
+          });
+        }
+    </script>  
+            <br>
+
+            <label class="title">11. Escribe el nombre de almenos 5 peliculas que para ti sean tus favoritas</label>
+	
+	        <TEXTAREA name="nom_peliculas" rows = 3 cols = 60 wrap = virtual ></TEXTAREA>
+            <BR>
+
+            <label class="title">12. Escribe el nombre de almenos 5 series de television que mas te hayan gustado</label>
+	
+	        <TEXTAREA name="nom_series" rows = 3 cols = 60 wrap = virtual ></TEXTAREA>
+            <BR>
+
+            <label class="title">13. Escribe el nombre de tus 5 libros favoritos que hayas leido</label>
+	
+	        <TEXTAREA name="nom_libros" rows = 3 cols = 60 wrap = virtual ></TEXTAREA>
+            <BR>
+
+<label for="enunciado" class="title"> 14. Selecciona un enunciado el cual consideres muy apropiado para ti</label>
+    <select name="enunciado" id="" >
+        <option value="enum_1">Vivo por y para mi familia, soy feliz porque tengo a mi familia a mi lado, los amo con todo mi corazón y por ellos daría mi vida</option>
+        <option value="enum_2">Trabajo para mi, para disfrutar de la vida, disfrutar cada momento porque no tenemos nada seguro</option>
+        <option value="enum_3">El amor es lo mas importante, una vida llena de experiencias maravillosas para compartirlas con mi pareja</option>
+        <option value="enum_4">Mi carrera es lo mas importante para mi, quiero hacer algo importante con mi vida.</option>
+        <option value="enum_5">Amar a Dios sobre todas las cosas, él ha traido la paz a mi vida y me ha hecho dichoso, gloria a Dios.</option>
+        <option value="enum_6">Solo quiero pasararla bien y divertirme tanto como pueda, viajar y tener nuevas experiencias</option>
+        <option value="enum_7">Quiero dar amor, compartir, ayudar a los demas y cuidar a los animales.</option>
+        <option value="enum_8">Nada tiene sentido, el gobierno solo nos perjudica y el capitalismo es injusto</option>
+        <option value="enum_9">Hay que trabajar tanto como uno pueda, el trabajo dignifica.</option>
+        <option value="enum_10">Yo solo vivo sin tantos deseos y mejor con desapegos</option>
+    </select>
+
+<label for="vestimenta" class="title">15. ¿Cómo prefieres vestir?</label>
+    <select name="enunciado" id="" >
+        <option value="enum_1">Ropa deportiva (pans, tenis, leggins )</option>
+        <option value="enum_2">Ropa de playa o bikini</option>
+        <option value="enum_3">Ropa de trabajo</option>
+        <option value="enum_4">Ropa casual (mezclilla, camiseta, tenis)</option>
+        <option value="enum_5">Ropa de oficina/formal(Camisa, falda, corbata)</option>
+        <option value="enum_6">Traje o de gala (Zapatos, vestido, Traje o smooking)</option>
+        <option value="enum_7">Ropa de fiesta (semiformal, accesorios, reloj, cadenas, camisa)</option>
+        <option value="enum_8">Ropa de Frio (chamarra, sueter, gabardina, bufanda) </option>
+    </select>
+
+<label class="title">Por último, nos gustaria recibir tus comentarios acerca de que te ha parecido esta encuesta. ¿Crees que incluye todas las opciones que son de tu agrado o crees que no hicieron falta opciones?¿Cuáles?</label>
+	
+	        <TEXTAREA name="comentario" rows = 3 cols = 60 wrap = virtual ></TEXTAREA>
+            <BR>
+
+             <button id="sendAnswer">Enviar datos</button>
+    </form>
+  </div>      
+       <ul id="listadepor" class="lista-gen_musical"></ul>
+
+
+
+    
+
+
+   
