@@ -1,6 +1,7 @@
 const modelo = require('../models/encuesta');
 var {createPool} = require('mysql');
 const encuesta = require('../models/encuesta');
+const env = require('dotenv')
 
 
 const con = createPool({
