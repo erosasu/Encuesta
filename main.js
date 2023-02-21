@@ -1,6 +1,7 @@
 const express = require('express');
 const AWS = require('aws-sdk')
 const dynamoose = require("dynamoose");
+var mysql = require('mysql');
 
 
 require('dotenv')
@@ -39,8 +40,13 @@ const ddb = new dynamoose.aws.ddb.DynamoDB({
 // Set DynamoDB instance to the Dynamoose DDB instance
 dynamoose.aws.ddb.set(ddb)
 
-app.listen(3000, ()=>{
-    console.log('app is runnin in port 3000 ')})
+
+
+
+
+app.listen(3001, ()=>{
+    console.log('app is runnin in port 3001 ')})
+
                        
         
 

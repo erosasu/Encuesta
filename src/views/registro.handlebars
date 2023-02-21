@@ -113,6 +113,7 @@
             }
           });
         }
+
          </script>   
            
             <br>
@@ -236,7 +237,7 @@
     </script>  
           <br>  
           <div id="deportes"> 
-            <label class="title">6.  Selecciona tus 3 deportes favoritos para ver o practicar</label>
+            <label class="deportes">6.  Selecciona tus 3 deportes favoritos para ver o practicar</label>
             <!-- Input Type Checkbox -->
             <label for="inp-1">
                 <input type="checkbox"
@@ -271,6 +272,7 @@
         </div>     
             <br>
              <script>
+
         const checkboxes4 = document.querySelectorAll('input[class="deportes"]');
 
         let selectedCount4 = 0;
@@ -733,6 +735,11 @@
 	        <TEXTAREA name="nom_libros" rows = 3 cols = 60 wrap = virtual ></TEXTAREA>
             <BR>
 
+            <label class="title">13. Escribe el nombre de tus 5 comidas favoritas</label>
+	
+	        <TEXTAREA name="comida" rows = 3 cols = 60 wrap = virtual ></TEXTAREA>
+            <BR>
+
 <label for="enunciado" class="title"> 14. Selecciona un enunciado el cual consideres muy apropiado para ti</label>
     <select name="enunciado" id="" >
         <option value="enum_1">Vivo por y para mi familia, soy feliz porque tengo a mi familia a mi lado, los amo con todo mi corazón y por ellos daría mi vida</option>
@@ -748,7 +755,7 @@
     </select>
 
 <label for="vestimenta" class="title">15. ¿Cómo prefieres vestir?</label>
-    <select name="enunciado" id="" >
+    <select name="vestimenta" id="" >
         <option value="enum_1">Ropa deportiva (pans, tenis, leggins )</option>
         <option value="enum_2">Ropa de playa o bikini</option>
         <option value="enum_3">Ropa de trabajo</option>

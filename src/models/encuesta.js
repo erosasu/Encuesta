@@ -1,4 +1,7 @@
 const dynamoose = require("dynamoose");
+const conexion = require('../../main.js')
+
+
 
 const encuesta = new dynamoose.Schema({ 
     "id": String,
@@ -13,4 +16,7 @@ const encuesta = new dynamoose.Schema({
     "timestamps": true
 });
 
+
+
 module.exports = dynamoose.model('Registros_encuestas', encuesta)
+
