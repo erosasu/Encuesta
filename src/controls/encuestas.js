@@ -17,29 +17,34 @@ module.exports ={
     registrarEncuesta:(req, res)=>{
         const respuestas = req.body
         respuestas.id = `${new Date().getTime()}`
-
+        
+        if(respuestas.gen_musical!=undefined){
         generomusical= respuestas.gen_musical.join(',')
-        respuestas.gen_musical = generomusical
+        respuestas.gen_musical = generomusical}
         
+        if(respuestas.act_acompanado!=undefined){
         actividadacom= respuestas.act_acompanado.join(',')
-        respuestas.act_acompanado=actividadacom
-
-        actsolo= respuestas.act_solo.join(',')
-        respuestas.act_solo=actsolo
-
+        respuestas.act_acompanado=actividadacom}
         
+        if(respuestas.gen_solo!=undefined){
+        actsolo= respuestas.act_solo.join(',')
+        respuestas.act_solo=actsolo}
 
+        if(respuestas.gen_pelis!=undefined){
         generopelis= respuestas.gen_pelis.join(',')
-        respuestas.gen_pelis=generopelis
-
+        respuestas.gen_pelis=generopelis}
+        
+        if(respuestas.gen_vid_youtube!=undefined){
         generovideo=respuestas.gen_vid_youtube.join(',')
-        respuestas.gen_vid_youtube=generovideo
-
+        respuestas.gen_vid_youtube=generovideo}
+        
+        if(respuestas.lugares!=undefined){
         lugares1= respuestas.lugares.join(',')
-        respuestas.lugares=lugares1
-
+        respuestas.lugares=lugares1}
+        
+        if(respuestas.tema!=undefined){
         temas= respuestas.tema.join(',')
-        respuestas.tema=temas
+        respuestas.tema=temas}
 
         var today = new Date();
         
