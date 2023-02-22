@@ -5,9 +5,9 @@ const env = require('dotenv')
 
 
 const con = createPool({
-    host: env.process.HOST,
-    user: env.process.USERNAME,
-    password: env.process.PASSWORD,
+    host: 'formulario.cdpxjbuwr0xh.us-east-1.rds.amazonaws.com',
+    user: 'admin',
+    password: 'DBencuesta123',
     database: 'dbencuesta',
     port: 3306
  })
